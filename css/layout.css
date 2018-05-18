@@ -1,0 +1,1334 @@
+﻿/* CSS FOR BASIC LAYOUT OF BEAMER - JULY 2016 */
+
+/* css reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+strike, strong, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+iframe.glavna
+{
+	 position:absolute; 
+	 left:0; top:0; 
+	 width:100%; 
+	 height:100%;
+	 overflow:hidden;
+}
+iframe.glavna2
+{
+	 position:absolute; 	
+	 width:0; 
+	 height:0;
+	 overflow:hidden;
+	 visibility:hidden;
+	 display:none;
+	 z-index:3;
+}
+
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* reset */
+body, html{
+    height: 100%;
+}
+body{
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+    font-size: 16px; /* osnovna veličina fonta (rem) za čitavu stranicu) */
+}
+
+/* --------------------------------------------------------------------- */
+/* MAIN_BACKGROUND I SECOND_BACKGROUND POZADINSKA SLIKA, HEADER I FOOTER */
+.mainpage_bg{
+	/* POZADINSKA SLIKA NA GLAVNOJ STRANICI */
+	background-image:url(../glavna.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%; /* PREKRIVA CIJELI EKRAN, MOGUĆE IZOBLIČENJE SLIKE OVISNO O OMJERIMA STRANICA */
+    overflow: hidden;
+}
+.mainpage2_bg{
+	/* POZADINSKA SLIKA NA NASLOVNOJ STRANICI RUNDE */
+	background-image:url(../glavna_a.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+.header.mainScreen{
+    background-color: transparent;
+	background-image:none; /* SKRIVA HEADER (Main pag, AKO JE POSTAVLJEN SA GRADIENTOM */
+} 
+.footerMainScreen{
+    background-color: transparent;
+	background-image:none; 	/* SKRIVA FOOTER, AKO JE POSTAVLJEN SA GRADIENTOM */}
+	
+/* KRAJ MAIN_BACKGROUND I SECOND_BACKGROUND POZADINSKA SLIKA, HEADER I FOOTER */
+/* --------------------------------------------------------------------- */
+
+
+/* header - NA STRANICAMA ZA PRIKAZ RUNDI I REZULTATA*/
+.header{ 
+    width: 100%;
+    height: 15%;
+    padding: 0.5% 2%;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+	  .header.TwoFloor{ /* IDO HEADER ZA DVA FLOORA */
+		  height: 7%;
+		  min-height:2.500rem;
+		  text-align: center;
+		  vertical-align: middle;
+		  font-size: 1.500rem;
+		  font-weight: 700;
+	  }
+	  
+/* DIJELOVI HEADERA ZA SMJEŠTAJ ELEMENATA */
+.left{
+    width: 15%;
+    height: 100%;
+    float: left;
+    min-height: 1px;
+    height: 100%;
+    position: relative;
+}
+.center{
+    width: 70%;
+    float: left;
+    height: 100%;
+	min-height: 1px;
+    position: relative;
+	vertical-align: middle;
+}
+.right{
+    width: 15%;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    position: relative;
+}
+.left img, .center img, .right img{ /* podešavanje veličine logotipa unutar headera */
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.center p{
+    text-align: center;
+}
+.center .eventTitle{
+	font-size: 1.750rem; 
+    font-weight: 700;
+    padding: 0.250rem;
+    /* text-transform: uppercase; */
+}
+.center .competitionName{
+	font-size: 2.500rem; 
+    font-weight: 700;
+    padding: 0.250rem;
+	text-transform: uppercase;
+}
+.center .heat{
+    padding: 0.250rem;
+	font-size: 1.750rem;
+	font-weight:700;
+}
+/* END HEADER */
+
+
+
+/* ------------------- MAIN AREA - CENTRALNI DIO EKRANA IZMEĐU HEADERA I FOOTERA  ---------------------------- */
+/* mainArea */
+#mainArea{
+    width: 100%;
+    height: 74%;
+    position: relative;
+	margin-top: 1rem;
+}
+#mainArea .row{
+    height: 100%;
+    margin: 0 auto;
+    /* width:90%; */
+	width:95%;	
+}
+	#mainArea .row.jedanPar{ /* jedan par na podiju, centriranje prikaza u sredinu ekrana */
+		width: 70%;
+		position:relative;
+		display:table; /* Parent div, pozicija: relative, radi centriranja broja (child poz. absolute) */
+		text-align:center;
+		font-weight:bold;
+	}
+
+/* ========================== GLAVNI EKRAN I EKRAN ZA NAZIV RUNDE ================================*/
+.competitionTitle{ /* glavni naslov na glavnom ekranu */
+    width: 100%;
+    text-align: center;
+    font-size: 3.750rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: absolute;
+    top:40%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+    line-height: 4rem;
+}
+	.competitionTitle.bez{ /* Naziv runde IDO dva floora */
+		font-size: 3.000rem;
+		top:50%;}
+
+.headerTitle{ /* NAZIV NATJECANJA NA GLAVNOM EKRANU */
+    font-size: 2.500rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+	margin-top:1.500rem;
+}
+	.headerTitle.bez{ /* NAZIV NATJECANJA U HEADER NA EKRANU ZA NAZIV RUNDE */
+		margin-top:0.800rem;} 
+
+.place{ /* mjesto održavanja turnira na glavnom ekranu */
+    text-align: center;
+    font-size: 2.500rem;
+	font-weight:700;
+    padding: 2%;
+	position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.date{
+    text-align: center;
+    font-size: 2.200rem;
+	font-weight:400;
+    position: absolute;
+    bottom: 2rem;
+    left:50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+		.date.bez{ /*  datum u istom redu s mjestom, na IDO ekranu naziva runde */
+			-webkit-transform: translateX(0%);
+			-moz-transform: translateX(0%);
+			transform: translateX(0%);
+			position:static;
+			padding-top:0.5rem}
+
+
+
+/* ============================== TABLICA ZA STARTNE LISTE I REZULTATE =========================== */
+table{
+    height: 98%;
+	margin: 0rem auto;
+	padding-top: 1rem;
+    width: 80%;
+}
+tr.tableInfo {
+	font-size: 2.000rem;
+    font-weight: 700;
+    text-align: center;
+	height:5%;
+}
+tr.tableInfo td{
+    vertical-align: middle;
+}
+tr.tableRows.six{ /* proglašenje parova, prikaz 6 i manje parova */
+    height: 15.83%;
+}
+tr.tableRows.seven{ /* proglašenje parova, prikaz 7 parova */
+    height: 13.57%;
+}
+tr.tableRows.eight{ /* proglašenje parova, prikaz 8 paroa */
+    height: 11.87%;
+}
+
+.startNo, .otherInfo, .position, .competitorName {
+    font-size: 1.750rem;
+    font-size: 2.500rem;
+	font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+    width: 10%;
+    position: relative;
+}
+.competitorName{
+    text-align: left;
+    vertical-align: middle;
+    width: 68%; 
+}
+
+.otherInfo{
+    width: 12%;
+}
+.otherInfo img{
+    width: auto;
+    max-width: 38%;
+    height: auto;
+    /* max-height: 80%; /* visina zastavice u rezultatima i startnoj listi */
+    /* position: absolute; /* KAD SE ISKLJUČI, POKAZUJU SE ZASTAVE U STARTNOJ LISTI */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.tekst{ /* tekst unutar slobodnog unosa za infor na ekranu */
+    font-size: 3.500rem;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+	height:95%;
+}
+
+
+/* pairs */
+/* ----------------  WRRC PRVI PAR, W RASORED ------------------- */
+.pairOne{   /* OSNOVNO - 5 PAROVA NA EKRANU */
+    display: inline-block;
+    float: left;
+    height: 50%;
+    width:33.33%;
+}
+
+.pairOne.four{  /* 4 PARA NA EKRANU */
+    margin-left: 0%;
+	width:40%;
+}
+
+.pairOne.three{ /* 3 PARA NA EKRANU */
+    margin-left: 0%;
+	width: 50%;
+}
+
+.pairOne.two{ /* DVA PARA NA EKRANU - SVAKI U SVOJOJ POLOVICI */
+    width:50%;
+    margin-left: 0%;
+    margin-top: 10%;
+}
+.pairOne.two.jugdes{
+    margin-top: 8%;
+}
+
+.pairOne.one{  /* JEDAN PAR NA EKRANU  */
+   /*  margin-top:10%;
+	margin-left: 15%; */
+			position:relative;
+			display: table-cell;
+    		vertical-align: middle;          /* vertical alignment of the inline element */
+			margin-top:0%;
+			margin-left: 0%;
+			width: 90%;
+			height: 100%;
+			float:none;
+
+}
+
+
+.pairOne.one.jugdes{
+    margin-top: 5%; /* parovi */
+	/* margin-top:10%; /* formacije, bez NJS */
+}
+
+	
+.row.winners > .pairOne.one.jugdes{
+    margin-top: 12%;
+}
+
+
+/* ---------------- DRUGI PAR, W RASORED ------------------- */
+.pairTwo{
+    display: inline-block;
+    float: left;
+    height: 50%;
+    margin-left: 16.67%;
+    width:33.33%;
+}
+
+.pairTwo.four{
+    margin-left: 20%;
+	width:40%;
+}
+
+.pairTwo.three{
+    margin-left:25%;
+	width:50%;
+}
+
+
+
+/* ---------------- TREĆI PAR, W RASORED ------------------- */
+.pairThree{
+    display: inline-block;
+    float: left;
+    height: 50%;
+    margin: 0 auto;
+    width:33.33%;
+}
+/* .pairThree.IDO{
+	margin-top:8%;
+} */
+.pairThree.three{ /* 3 PARA NA EKRANU */
+	width:50%;
+}
+
+.pairThree.four{ /* 4 PARA NA EKRANU */
+	width:40%;
+}
+
+.pairThree.two{
+    width: 50%;
+    margin-top: 15%;
+}
+.pairThree.two.jugdes{
+    margin-top: 8%;
+}
+
+
+/* ---------------- ČETVRTI PAR, W RASORED ------------------- */
+.pairFour{ /* 5 parova NA EKRANU */
+    display: inline-block;
+    float: left;
+    height: 50%;
+    margin: 0 auto;
+    width:33.33%;
+}
+.pairFour.four{ /* 4 para NA EKRANU */
+    width:40%;
+	/* margin-left:5%; */
+}
+.pairFive{
+    display: inline-block;
+    float: left;
+    height: 50%;
+    margin: 0 auto;
+    width:33.33%;
+}
+
+
+/* ============  6 PAROVA - IDO - JEDAN FLOOR =======================*/
+.pairOneIDO{   /* OSNOVNO - 6 PAROVA NA EKRANU, par 1 */
+	display: inline-block;
+    float: left;
+    width:33%; 
+	/* height:40%;
+	margin-top:7%; */
+	height:48%;
+}
+	  .pairOneIDO.dvaF{   /* OSNOVNO - 6 PAROVA NA EKRANU, dva floora par 1 */
+		  height:43%;
+		  margin-top:5%; }
+
+		.pairOneIDO.two{   /* 2 PARA NA EKRANU, par 1 */
+		  height: 98%;
+		  width:50%;}
+			  .pairOneIDO.two.dvaF{   /* 2 PARA NA EKRANU, par 1, dva floora */
+				  width:60%;
+				  height:50%;
+				  margin-top:0%;}
+				  
+		.pairOneIDO.three{   /* 3 PARA NA EKRANU, par 1 */
+		  height: 48%;
+		  margin-top: 0%;
+		  width:50%;}
+		  
+			  .pairOneIDO.three.dvaF{   /* 3 PARA NA EKRANU, par 1, dva floora */
+				  width:33%;
+				  height:50%;
+				  margin-top:0%;}
+				  		  
+		.pairOneIDO.four{ /* 4 PARA NA EKRANU, PAR 1 */
+		  width: 40%;
+		  height:48%; }
+		  	   .pairOneIDO.four.dvaF{ /* 4 PARA NA EKRANU, PAR 1 */
+				  margin-top:0%;
+				  width: 40%;
+				  height:50%; }
+
+
+.pairTwoIDO{ /* OSNOVNO - 6 PAROVA NA EKRANU, par 2 */
+    display: inline-block;
+    float: left;
+    height: 48%;
+    margin-top: -5%; /* srednji par izdignut prema gore */
+    width:34%;
+}
+		.pairTwoIDO.dvaF{
+			width:40%;
+			height:20%;
+			margin-left:10%;
+			/* margin-right:auto; */
+			margin-top:0%}
+		.pairTwoIDO.two{   /* 2 PARA NA EKRANU, par 21 */
+		  height: 98%;
+		  margin-top: 0%; 
+		  width:49%;}
+			  .pairTwoIDO.two.dvaF{   /* 2 PARA NA EKRANU, par 2, dva floora */
+				float:right;
+				width:60%;
+				height:50%;
+				margin-top:0%;}
+		  
+		.pairTwoIDO.three{ /* 3 PARA NA EKRANU, par 2 */
+		  height: 48%;
+		  margin-top: 0%;
+		  width:50%;}
+		  		.pairTwoIDO.three.dvaF{   /* 3 PARA NA EKRANU, par 2, dva floora */
+				  width:50%;
+				  height:50%;
+				  margin-top:0%;}
+				  
+		.pairTwoIDO.four{ /* 4 PARA NA EKRANU, PAR 2 */
+		  margin-top:0%;
+		  width: 40%;
+		  height:48%; }
+				.pairTwoIDO.four.dvaF{ /* 4 PARA NA EKRANU, PAR 2 */
+				  margin-top:0%;
+				  width: 40%;
+				  height:50%; }
+
+		  
+.pairThreeIDO{ /* OSNOVNO - 6 PAROVA NA EKRANU, par 3 */
+    display: inline-block;
+    float: left;
+    width:33%; 
+	height: 48%; }
+	.pairThreeIDO.dvaF{
+		  height:43%;
+		  margin-top:5%; }
+	  .pairThreeIDO.three{ /* OSNOVNO - 6 PAROVA NA EKRANU, par 3 */
+		  width:50%; 
+		  margin-top: 0%;
+		  margin-left: 25%;
+		  height: 50%; }
+	  .pairThreeIDO.four{ /* 4 PARA NA EKRANU, par 3 */
+		  width:40%; 
+		  /* margin-top: 5%; */
+		  margin-left: 20%;
+		  height: 48%; }
+			  .pairThreeIDO.four.dvaF{ /* 4 PARA NA EKRANU, par 3 */
+				  width:40%; 
+				  margin-top: 0%;
+				  margin-left: 15%;
+				  height: 50%; }
+		  		  
+.pairFourIDO{ /* OSNOVNO - 6 PAROVA NA EKRANU, par 4 */
+    display: inline-block;
+    float: left;
+    height: 48%;
+    margin-left: 0%;
+	width:33.33%;}
+	  .pairFourIDO.four{ /* 5 PAROVA NA EKRANU, par 4 */
+		  width:40%;
+		  /* margin-top: 5%; */
+		  height: 48%; }
+			  .pairFourIDO.four.dvaF{ /* 5 PAROVA NA EKRANU, par 4 */
+				  width:40%;
+				  margin-left: 40%;
+				  height: 25%; }
+	  .pairFourIDO.five{ /* 5 PAROVA NA EKRANU, par 4 */
+		  margin-left:10%; 
+		  width:40% }
+			  .pairFourIDO.five.dvaF{ /* 5 PAROVA NA EKRANU, par 4, dva floora */		  
+				  width: 40%;
+				  height: 20%;
+				  margin-left: 30%;}
+		  
+		  
+.pairFiveIDO{ /* OSNOVNO - 6 PAROVA NA EKRANU, par 5 */
+    display: inline-block;
+    float: left;
+    height: 40%;
+    margin-top: 5%; 
+    width:33.33%; }
+	  .pairFiveIDO.dvaF{ /* 5 PAROVA NA EKRANU, par 5 */
+		  height: 48%;
+		  margin-top: 10%;}
+		  
+		  .pairFiveIDO.five{ /* 5 PAROVA NA EKRANU, par 5 */
+		  width: 40%;
+		  height: 48%;
+		  margin-top: 0%;}
+
+		  	  .pairFiveIDO.five.dvaF{ /* 5 PAROVA NA EKRANU, par 5, dva floora*/
+				width: 40%;
+				height: 20%;
+				margin-left: 40%;}
+
+		  
+.pairSixIDO{
+	display: inline-block;
+    float: left; 
+    height: 48%;
+    width:33.33%; 
+}
+
+/* ------------------  STARTNI BROJEVI IDO ------------------------ */		
+		.pairNoIDO_2f{ /* STARTNI BROJ IDO - 3-6 PAROVA, DVA FLOORA */
+			font-size: 8.000rem;
+			font-weight:700;}
+			
+		.pairNoIDO_2_bez{ /* STARTNI BROJ ZA IDO - 2-3 - BEZ NAZIVA */
+			font-size: 15.000rem;}
+		.pairNoIDO_6_bez{ /* STARTNI BROJ ZA IDO - 4-6 - BEZ NAZIVA */
+			font-size: 13.000rem;
+			font-weight:bold;}
+			
+				.pairNoIDO_2f, .pairNoIDO_2_bez, .pairNoIDO_6_bez, .pairNoIDO.dvaF,
+			    .pairNoIDO_6_bez.dvaF, .pairNoIDO_2_bez.dvaF{ /* VERTIKALNO CENTRIRANJE BROJA */
+				  position: relative; 
+				  top: 50%;
+				  -webkit-transform: translateY(-50%);
+				  -ms-transform: translateY(-50%);
+				  transform: translateY(-50%);}			
+			
+			
+		.pairOne.dvaF{  /* JEDAN PAR NA PODIJU, DVA FLOORA  */
+			display: table-cell;
+    		vertical-align: middle;          /* vertical alignment of the inline element */
+			margin-top:0%;
+			margin-left: 0%;
+			width: 90%;
+			height: 100%;
+			float:none;}
+			
+		.triPara{  /* TRI PAR NA PODIJU, JEDAN FLOOR  */
+			display: table-cell;
+    		vertical-align: middle;          /* vertical alignment of the inline element */
+			margin-top:0%;
+			margin-left: 0%;
+			width: 100%;
+			height: 100%;
+			float:none;}			
+				
+		.pairNoIDO{
+			font-size: 10.000rem;
+			margin-bottom: 1rem;}
+		.pairNameIDO{
+			font-size: 3.000rem;
+			margin-bottom: 1rem; }
+		.pairNameIDO.one{
+			font-size: 4.500rem;}
+		/* KRAJ IDO STARTNIH BROJEVA */	
+
+/* =====================  DVA FLOORA ===================================== */
+		.floor{ /* OSNOVNI DIV ZA PODJELU NA DVA FLOORA */
+			height: 98%;
+			width:49%;
+			text-align:center;
+			background-color: rgba(32, 32, 32, 0.1); /* crno siva, prozirna */}
+
+		.floor.one{ /* IDO PODJELA NA DVA FLOORA - LIJEVI*/
+			float:left;	}
+		.floor.two{ /* IDO PODJELA NA DVA FLOORA - DESNI*/
+			float:right;}
+			.floor.one.oneF, .floor.two.oneF{
+				background-color:transparent;}			
+		.tablica_floor{ /* DIV u koji se smješta tablica za lijevi ili desni floor */
+			position:relative;
+			display:table; /* Parent div, pozicija: relative, radi centriranja broja (poz. absolute) */
+			height:90%;
+			width:100%;
+			font-weight:700;}			
+			.tablica_floor.oneF{ /* DIV u koji se smješta tablica za lijevi ili desni par, kad je samo jedan podij */
+				height:100%;}
+	
+/* ===================== KRAJ IDO BROJEVA BEZ IMENA ========================= */
+
+
+
+
+
+.row > div[class^=pair]{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-weight: 700;
+    padding: 1% 1%;
+    text-align: center;
+}
+.pairNo{
+    font-size: 7.000rem;
+    margin-bottom: 1rem;
+}
+.pairName{
+    font-size: 3.300rem;
+    margin-bottom: 1rem;
+}
+		.pairName.one{
+			font-size: 5rem;
+		}
+		.pairName.three{ /* kad je više od 3 para */
+			font-size: 3.000rem;
+		}
+.pairResult{ /* NJS SCORE DVA PARA */
+    font-size: 2.700rem;
+    margin: 1rem 0rem;
+}
+.pairResult.one{
+    font-size: 3.200rem;
+}
+.pairPlace{ /* okvir oko podloge za mjesto i prikaz kartona */
+	border-style: solid;
+    border-width: 1px 3px 3px 1px;
+	border-radius:2.000rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 3.000rem;
+    /*height: 3.500rem; */
+    padding: 0.400rem;
+	width:60%;
+	margin-left:20%;
+}
+.marks{
+    margin-top: 1rem;
+}
+.marks > ul li{ /* oznake sudaca */
+    display: inline-block;
+    font-size: 2.500rem;
+}
+.marks.two > ul li{ /* oznake sudaca */
+    font-size: 2.000rem;
+}
+
+.marks > ul li:last-child{
+    margin-left: 2rem;
+}
+.marks > ul li span.noVote i{
+    visibility: hidden;
+}
+.marks > ul li i{
+    display: block;
+    padding-bottom: 0.500rem;
+}
+.finalPlace{
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+.CountryClub{ /* naziv države ili kluba ako je uključeno nacinalno prikazivanje */
+	font-size: 2.000rem;
+}
+
+/* ------------------------------- WINNER CEREMONY ------------------ */
+
+.pairOne.win{ /* PRVO MJESTO - PROGLAŠENJE */
+    margin-top: 2%;
+	margin-left:10%;
+	width:80%;
+	height: 45%;
+}
+.pairWinerOne{
+	margin-left:30%;
+	width:40%;
+	border-style: solid;
+    border-width: 1px 4px 4px 1px;
+	border-color:rgba(0,0,0,0.5);
+	border-radius:1.8rem;
+    font-size: 3.700rem;
+    margin-bottom: 1rem;
+		color:#FFF; /* BOJA DEFINIRANA OVDJE */
+		text-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+		background:#C00;
+		background: -webkit-gradient(linear, left left, left right, from(#FFD700), to(#DAA520));
+			 background-image: -webkit-linear-gradient(left, #FFD700, #DAA520, #DAA520,  #FFD700);
+			 background-image: -moz-linear-gradient(left, #FFD700, #DAA520, #DAA520,  #FFD700);
+			 background-image: -ms-linear-gradient(left, #FFD700, #DAA520, #DAA520,  #FFD700);
+			 background-image: -o-linear-gradient(left, #FFD700, #DAA520, #DAA520,  #FFD700);
+			 background-image: linear-gradient(to left, #FFD700, #DAA520, #DAA520,  #FFD700);
+}
+.pairName.win1{
+    font-size: 3.500rem;
+}
+
+.pairTwo.win{ /* DRUGO MJESTO - PROGLAŠENJE */
+    margin-left: 0%;
+	width: 50%;
+}
+.pairWinerTwo{
+	margin-left:20%;
+	width:60%;
+	border-style: solid;
+    border-width: 1px 4px 4px 1px;
+	border-color:rgba(0,0,0,0.5);
+	border-radius:1.8rem;
+    font-size: 3.000rem;
+    margin-bottom: 1rem;
+		color:#FFF; /* BOJA DEFINIRANA OVDJE */
+		text-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+		background:#C00;
+		background: -webkit-gradient(linear, left left, left right, from(#FFD700), to(#DAA520));
+			 background-image: -webkit-linear-gradient(left, #F5F5F5, #C0C0C0, #C0C0C0,  #F5F5F5);
+			 background-image: -moz-linear-gradient(left, #F5F5F5, #C0C0C0, #C0C0C0,  #F5F5F5);
+			 background-image: -ms-linear-gradient(left, #F5F5F5, #C0C0C0, #C0C0C0,  #F5F5F5);
+			 background-image: -o-linear-gradient(left, #F5F5F5, #C0C0C0, #C0C0C0,  #F5F5F5);
+			 background-image: linear-gradient(to left, #F5F5F5, #C0C0C0, #C0C0C0,  #F5F5F5);
+}
+.pairName.win2{
+    font-size: 2.800rem;
+}
+
+
+.pairThree.win{ /* 3 PARA NA EKRANU */
+	margin-top: 2%;
+	width:50%;
+	height: 40%
+}
+.pairWinerThree{
+	margin-left:20%;
+	width:60%;
+	border-style: solid;
+    border-width: 1px 4px 4px 1px;
+	border-color:rgba(0,0,0,0.5);
+	border-radius:1.8rem;
+    font-size: 3.000rem;
+    margin-bottom: 1rem;
+		color:#FFF; /* BOJA DEFINIRANA OVDJE */
+		text-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+		background:#C00;
+		background: -webkit-gradient(linear, left left, left right, from(#FFD700), to(#DAA520));
+			 background-image: -webkit-linear-gradient(left, #FFE4B5, #CD853F, #CD853F,  #FFE4B5);
+			 background-image: -moz-linear-gradient(left, #FFE4B5, #CD853F, #CD853F,  #FFE4B5);
+			 background-image: -ms-linear-gradient(left, #FFE4B5, #CD853F, #CD853F,  #FFE4B5);
+			 background-image: -o-linear-gradient(left, #FFE4B5, #CD853F, #CD853F,  #FFE4B5);
+			 background-image: linear-gradient(to left, #FFE4B5, #CD853F, #CD853F,  #FFE4B5);
+}
+
+/* ====================================  KRAJ MAIN AREA ======================================== */
+
+
+
+/* --------------------------  footer ------------------------------------------------ */
+#footer{
+    width: 100%;
+    height: 10%;
+    padding: 0.5% 2% 1% 2%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#footerMainScreen{
+    width: 100%;
+    height: 10%;
+    padding: 0.5% 2% 1% 2%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.disclamer{ /* LPRDS copyright natpis */
+    font-size: 0.850rem;
+    text-align: center;
+}
+
+
+/* ===============   1600 ŠIRINA EKRANA ==================== */
+@media (max-width:1600px){
+	.header{
+    height: 15%; 
+	}
+.center .eventTitle{
+	font-size: 1.250rem;*/ /* za 1280 i 1600 ekran */
+    /* text-transform: uppercase; */
+}
+.headerTitle{
+ /* mjesto održavanja turnira na glavnom ekranu */
+    font-size: 2.000rem;
+}
+	
+/* MAIN AREA */
+    #mainArea{
+        height: 73%; }
+
+.competitionTitle{ /* glavni naslov na glavnom ekranu */
+    font-size: 3.000rem;}
+		.competitionTitle.bez{ /* naslov runde dva floora */
+		font-size: 2.500rem;}
+
+	
+.center .competitionName{
+    font-size: 2.000rem;}
+.center .heat{
+	font-size: 1.650rem; 
+}	
+
+.startNo, .otherInfo, .position, .competitorName {
+    font-size: 2.000rem;}
+
+    .pairNo{
+        font-size: 5.000rem;
+    } 
+	.pairName{
+        font-size: 3.000rem;
+    }
+	  .pairName.one{
+        font-size: 4rem;
+    }
+		.pairName.three{ /* kad je više od 3 para */
+			font-size: 2.200rem;
+		}
+	.marks.two{
+		font-size: 1.800rem;
+	}
+	
+		.pairNoIDO{
+			font-size: 7.000rem;
+			margin-bottom: 1rem;}
+		.pairNameIDO{
+			font-size: 2.500rem;
+			margin-bottom: 1rem; }
+		.pairNameIDO.one{
+			font-size: 4rem;}
+
+	.CountryClub{
+		font-size:1.500rem;}
+
+
+
+}
+/* ===============   1280 ŠIRINA EKRANA ==================== */
+@media (max-width:1280px){
+	.header{
+    width: 100%;
+    height: 14%; 
+	}
+	
+.center .competitionName{
+    font-size: 2.000rem; 
+}
+.center .heat{
+	font-size: 1.800rem; 
+}	
+
+
+/* MAIN AREA */
+    #mainArea{
+        height: 75%; 
+    }
+
+.competitionTitle{ /* glavni naslov na glavnom ekranu */
+    font-size: 2.750rem;}
+	.competitionTitle.bez{ /* glavni naslov na glavnom ekranu */
+    font-size: 2.500rem;}
+
+	
+.place, .headerTitle{
+ /* mjesto održavanja turnira na glavnom ekranu */
+    font-size: 1.800rem;
+}
+.date{
+    font-size: 1.600rem;
+}
+
+.startNo, .otherInfo, .position, .competitorName { /* startna lista, rezultati */
+    font-size: 1.850rem;}
+	#mainArea .row.jedanPar{
+	width: 80%;}
+
+	table{
+    width: 85%;
+	}	
+	tr.tableInfo {    
+	font-size: 1.600rem;
+    height:2.300rem; 
+	}
+	.tekst{
+    font-size: 3.000rem;
+	}
+
+
+    .pairOne.one.jugdes{
+        margin-top: 10%;
+    }
+    .pairOne.two.jugdes{
+    margin-top: 5%;
+    }
+    .pairThree.two.jugdes{
+    margin-top: 5%;
+    }
+    .pairNo{
+        font-size: 5.000rem;
+    } 
+   .pairName{
+        font-size: 2.500rem;
+    }
+	  .pairName.one{
+        font-size: 3.800rem;
+    }
+		.pairName.three{
+			font-size:2.000rem;
+		}
+	.pairResult{
+		font-size: 2.600rem; /* 1.700 */
+		margin: 1rem 0rem;
+	}
+	.pairResult.one{
+		/* font-size: 2.300rem; */23:30 08.07.2016
+		font-size: 2.800rem;
+	}
+	.pairPlace{ /* okvir oko podloge za mjesto i prikaz kartona */
+    box-sizing: border-box;
+    font-size: 2.600rem;
+    /*height: 3.500rem; */
+    padding: 0.200rem;
+	}
+	.marks.two > ul li{ /* oznake sudaca */	
+    display: inline-block;
+    font-size: 1.700rem;
+	}
+
+    #footer{
+        height: 10%;
+        padding: 0.5% 2% 1.2% 2%;
+    }
+		.pairOneIDO.dvaF, .pairThreeIDO.dvaF{
+		  height:15%;
+		  margin-top:33%; }
+		  
+		.pairNoIDO_2_bez{ /* STARTNI BROJ ZA IDO - 2-3 - BEZ NAZIVA */
+			font-size: 14.000rem;}
+		.pairNoIDO_6_bez{ /* STARTNI BROJ ZA IDO - 4-6 - BEZ NAZIVA */
+			font-size: 12.000rem;
+			font-weight:bold;}
+		  
+	.disclamer{
+		font-size:0.700rem}
+		
+		.pairNoIDO{
+			font-size: 6.000rem;
+			margin-bottom: 1rem;}
+		.pairNameIDO{
+			font-size: 2.500rem;
+			margin-bottom: 1rem; }
+		.pairNameIDO.one{
+			font-size: 3.5rem;}
+	
+
+}
+/* ===============   1024 ŠIRINA EKRANA ==================== */
+@media (max-width:1024px){
+	/* HEADER */
+		.header{
+    height: 14%; 
+	}
+
+	.center .eventTitle{
+	font-size: 1.0rem;
+	}
+	.center .competitionName{
+  	font-size: 1.500rem; 
+	}
+	.center .heat{
+ 	font-size: 1.200rem;
+	}
+
+	/* MAIN SCREEN AREA */
+	#mainArea{
+	height: 74%; 
+    }
+
+	#mainArea .row.jedanPar{
+	width: 90%;}
+
+	.startNo, .otherInfo, .position, .competitorName{
+    font-size: 1.500rem;
+	}
+	table{
+    width: 90%;
+	}
+	tr.tableInfo {    
+	font-size: 1.500rem;
+    height:2.000rem; 
+	}	
+	.tekst{
+    font-size: 2.800rem;
+	}
+
+/*    .row > div[class^="pair"]{
+        padding: 6% 2%; 
+    } */
+    .pairOne.one.jugdes{
+        margin-top: 3%; /* PAROVI */
+		/* margin-top:10%; /* FORMACIJE */
+    }
+    .pairOne.two.jugdes{
+        margin-top: 5%;
+    }
+    .pairThree.two.jugdes{
+        margin-top: 5%;
+    }
+    .pairNo{
+        font-size: 3.500rem;
+    }
+    .pairName{
+        font-size: 2.000rem;
+    }
+    .pairName.one{
+        font-size: 3.600rem;
+    }
+			.pairName.three{
+			font-size:1.8000rem;
+		}
+
+	.pairPlace{ /* okvir oko podloge za mjesto i prikaz kartona */
+    box-sizing: border-box;
+    font-size: 2.200rem;
+    /*height: 3.500rem; */
+    padding: 0.200rem;
+	}
+	.marks > ul li{ /* oznake sudaca */
+		font-size: 2.000rem;
+	}
+	.marks.two > ul li{ /* oznake sudaca */	
+    display: inline-block;
+    font-size: 1.500rem;
+	}
+
+/*			.pairNoIDO{
+			font-size: 7.000rem;
+			margin-bottom: 1rem;}
+		.pairNameIDO{
+			font-size: 2.500rem;
+			margin-bottom: 1rem; } 
+		.pairNameIDO.one{
+			font-size: 4.000rem;} */
+
+    #footer{
+        padding: 0.5% 2% 1.5% 2%;
+    }
+	.pairWinerOne{
+	    font-size: 2.500rem;
+	}
+	.pairWinerTwo{
+	    font-size: 2.000rem;
+	}
+	.pairWinerThree{
+	    font-size: 2.000rem;
+	}
+	.pairName.win1{
+    font-size: 2.200rem;
+	}
+	.pairName.win2{
+    font-size: 1.700rem;
+	}
+	.CountryClub{
+	font-size: 1.500rem;
+}
+	/* IDO STARTNI BROJEVI */
+		.pairNoIDO_2f{ /* STARTNI BROJ IDO - 3-6 PAROVA, DVA FLOORA */
+			font-size: 4.000rem;
+			font-weight:700;}
+
+		.pairNoIDO_2_bez{ /* STARTNI BROJ ZA IDO - 2-3 - BEZ NAZIVA */
+			font-size: 11.000rem;}
+		.pairNoIDO_6_bez{ /* STARTNI BROJ ZA IDO - 4-6 - BEZ NAZIVA */
+			font-size: 8.000rem;
+			font-weight:bold;}		
+				
+		.pairOneIDO.dvaF, .pairThreeIDO.dvaF{
+		  height:15%;
+		  margin-top:33%; }
+	/* KRAJ IDO STARTNIH BROJEVA */	
+}
+
+/* ===============   800 ŠIRINA EKRANA - LPRDS PREVIEW  ==================== */
+@media (max-width:800px){ /* LPRDS PREVIEW */
+	/* HEADER */
+	.header{
+    width: 100%;
+    height: 15%; 
+	}
+	.header.TwoFloor{
+		font-size:0.800rem;}
+		
+	.center .eventTitle, .headerTitle{
+    font-size: 0.700rem;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+	padding: 0.100rem; 
+	}
+	.center .competitionTitle{
+  	font-size: 0.900rem; 
+	}
+	
+	.center .competitionName{
+  	font-size: 0.900rem; 
+	}
+	.center .heat{
+ 	font-size: 0.900rem;
+	padding: 0.100rem;
+	}
+	
+
+	/* MAIN SCREEN AREA */
+	#mainArea{
+	height: 72%; 
+    }
+	.startNo, .otherInfo, .position, .competitorName{
+    font-size: 0.9rem;
+	text-shadow: 1px 1px 1px rgba(0,0,0,1);
+	}
+	.pairCountry img {
+	max-width:20%;
+	}
+	.CountryClub {
+		font-size:0.800rem;
+		}
+	table{
+    width: 95%;
+	}
+		tr.tableInfo {    
+	font-size: 1.000rem;
+    height:1.300rem; 
+	}
+	.tekst{
+    font-size: 2.000rem;
+	}
+
+	.eventTitle{
+	font-size: 1.500rem;
+	}
+	.competitionTitle{
+  	font-size: 1.500rem; 
+		line-height: 1.700rem;
+
+	}
+	.competitionTitle.bez{
+  	font-size: 1.200rem; 
+	}
+	.place, .date{
+    font-size: 0.800rem;
+	}
+
+	
+/*    .row > div[class^="pair"]{
+        padding: 6% 2%;
+    } */
+    .pairOne.one.judges{
+        margin-top: 3%;
+    }
+    .pairOne.two.jugdes{
+        margin-top: 5%;
+    }
+    .pairThree.two.jugdes{
+        margin-top: 5%;
+    }
+    .pairNo {
+        font-size: 1.500rem;
+    }
+	    .pairNoIDO{
+        font-size: 1.500rem;
+    }
+
+    .pairName, .pairName.one, .pairName.three {
+        font-size: 1.200rem;
+    }
+	    .pairNameIDO, .pairNameIDO.one{
+        font-size: 1.200rem;
+    }
+
+
+	.pairResult, .pairResult.one{
+    /* color: #484848; */
+    font-size: 0.750rem;
+    margin: 0.5rem 0rem;
+	}
+	.pairPlace{
+    font-size: 1.00rem;
+    height: 1.5rem;
+    padding: 0.250rem;
+	}
+	.marks > ul li, .marks.two > ul li{
+    display: inline-block;
+    font-size: 0.850rem;
+	}
+/*	.marks.two > ul li{ /* oznake sudaca */	
+/*    display: inline-block;
+    font-size: 0.850rem;
+	}*/
+	
+    #footer{
+        padding: 0.5% 2% 1.5% 2%;
+    }
+	
+	
+	.pairWinerOne{
+	    font-size: 1.250rem;
+	}
+	.pairWinerTwo{
+	    font-size: 1.000rem;
+	}
+	.pairWinerThree{
+	    font-size: 1.000rem;
+	}
+	.pairName.win1{
+    font-size: 1.000rem;
+	}
+	.pairName.win2{
+    font-size: 0.800rem;
+	}
+			.pairNoIDO_2f{ /* STARTNI BROJ IDO - 3-6 PAROVA, DVA FLOORA */
+			font-size: 2.000rem;
+			font-weight:700;}
+			.pairNoIDO_2_bez{ /* STARTNI BROJ ZA IDO - 2-3 - BEZ NAZIVA */
+				font-size: 5.000rem;
+				}
+			.pairNoIDO_6_bez{ /* STARTNI BROJ ZA IDO - 4-6 - BEZ NAZIVA */
+				font-size: 4.000rem;}
+	.disclamer{
+    font-size: 0.500rem;}
+			/* KRAJ IDO STARTNIH BROJEVA */	
+}
+
+/* Tihomir dodao - SAKRIVANJE IMENA I KLUBA-DRŽAVE NA 1, 2 I 3 PARA IDO*/       
+.no_data
+{  height: 0pt;}               
+
+
+	

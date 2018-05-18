@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html> <!-- TODO -->
+    <head>
+        <meta charset="utf-8" />
+        <title>Heat by two - qualifications</title> <!-- RGU : Heat for qualif, 2 couples -->
+        <link rel="stylesheet" href="css/style-cs18.css" />
+<SCRIPT ID=clientEventHandlersJS LANGUAGE=javascript>
+<!--
+function gasi()
+{ 
+  document.getElementById("place_1").style.visibility="hidden";
+  document.getElementById("place_2").style.visibility="hidden";
+  /*
+  document.getElementById("rez_1").style.visibility="hidden";
+  document.getElementById("rez_2").style.visibility="hidden";
+  document.getElementById("s11").style.visibility="hidden";
+  document.getElementById("s12").style.visibility="hidden";
+  document.getElementById("s13").style.visibility="hidden";
+  document.getElementById("s14").style.visibility="hidden";
+  document.getElementById("s15").style.visibility="hidden";
+  document.getElementById("s16").style.visibility="hidden";
+  document.getElementById("s17").style.visibility="hidden";
+  document.getElementById("o1").style.visibility="hidden";
+  document.getElementById("s21").style.visibility="hidden";
+  document.getElementById("s22").style.visibility="hidden";
+  document.getElementById("s23").style.visibility="hidden";
+  document.getElementById("s24").style.visibility="hidden";
+  document.getElementById("s25").style.visibility="hidden";
+  document.getElementById("s26").style.visibility="hidden";
+  document.getElementById("s27").style.visibility="hidden";
+  document.getElementById("o2").style.visibility="hidden";
+  */
+ }
+function window_onload() {
+  gasi();
+  sdt()
+}
+
+function pali()
+{ var staro=document.getElementById("last_pali").value;
+  xx=0; 
+  for (x=0;x<=7;x++)  
+   {  var xx=x+1 ;
+       { document.getElementById("ss1"+xx).innerHTML=staro.charAt(18+x);
+	     document.getElementById("ss2"+xx).innerHTML=staro.charAt(18+x);}  
+	}   
+ 
+  xx=0; 
+  for (x=0;x<=7;x++)  
+   {  var xx=x+1 ;
+     
+		 if (staro.charAt(2*x)=="1" )
+		  { document.getElementById("s1"+xx).style.visibility="visible";} 
+		 else
+		  {document.getElementById("s1"+xx).style.visibility="hidden";} 
+    
+		if (staro.charAt(2*x+1)=="1" )
+		  { document.getElementById("s2"+xx).style.visibility="visible";} 
+		 else
+		  {document.getElementById("s2"+xx).style.visibility="hidden";} 
+    }
+     if (staro.charAt(16)!="-")
+      { document.getElementById("o1").style.visibility="visible";
+        document.getElementById("place_1").style.visibility="visible";
+       switch(staro.charAt(16))
+            {         case "0":
+	       document.getElementById("place_1").className="pairPlace green";
+	       break;	 
+	   case "1":
+	       document.getElementById("place_1").className="pairPlace yellow";
+	        break;
+	   case "2":
+	       document.getElementById("place_1").className="pairPlace red";
+	        break; 	
+	   default:
+	        document.getElementById("place_1").className="pairPlace green";
+	        break;     		
+	  }      
+        
+       } 
+     else
+      {document.getElementById("o1").style.visibility="hidden";
+       document.getElementById("place_1").style.visibility="hidden";}
+       
+     if (staro.charAt(17)!="-")
+      { document.getElementById("o2").style.visibility="visible";
+        switch(staro.charAt(17))
+            {         case "0":
+	       document.getElementById("place_2").className="pairPlace green";
+	       break;	 
+	   case "1":
+	       document.getElementById("place_2").className="pairPlace yellow";
+	        break;
+	   case "2":
+	       document.getElementById("place_2").className="pairPlace red";
+	        break; 	
+	   default:
+	        document.getElementById("place_2").className="pairPlace green";
+	        break;     		
+	  }      
+        document.getElementById("place_2").style.visibility="visible";} 
+     else
+      {document.getElementById("o2").style.visibility="hidden";
+      document.getElementById("place_2").style.visibility="hidden";}    
+}
+ 
+function sdt()
+{
+  var staro=document.getElementById("last_pali").value;
+      document.getElementById('pali').src="pali.htm";
+  var novo=document.getElementById("pali").contentWindow.document.body.innerHTML;
+           
+    if (novo != staro) {               
+         document.getElementById("last_pali").value=novo  ;
+         pali();
+         }
+setTimeout('sdt()',800);
+}
+//-->
+</SCRIPT>
+</head>
+    <body LANGUAGE=javascript onload="return window_onload()">
+    <input type="hidden"  id="last_pali" value="">
+  <iframe  name="pali" id="pali"  src="pali.htm"  scrolling="no" class ="glavna2" ></iframe>     
+        <div class="header">
+            <div class="left">
+                <img src="./img-cs18/logo-championnat-white-header.png" class="event-logo" />
+            </div><!-- end left -->
+            <div class="right">
+                <img src="./img-cs18/logo-srrc-white.png" class="srrc-logo" />
+            </div><!-- end right -->
+            <div class="center">
+                <p class="eventTitle">#naziv_event#</p><!-- end eventTitle -->
+                <p class="competitionName">#naziv_comp# - #runda#</p><!-- end competitonName -->
+                <p class="heat">(Heat: #rbr# / #uk#)</p><!-- head -->
+            </div><!-- end center -->
+        </div><!-- end header -->
+        <div id="mainArea">
+            <div class="row">
+
+<!-- ***************************  KOPIRANO IZ DVA FLOORA **********************  -->
+	<div class="floor one oneF">
+	   <div class="tablica_floor oneF">
+                  <!-- prostor za tablicu prikaza - prvi floor -->
+			
+			<div class="pairOne dvaF">
+                <!-- <div class="pairOne two jugdes"> -->
+                    <p class="pairNo">#stb_1#</p><!-- end pairNo -->
+                    <p class="pairName">#naziv_1#</p><!-- pairName -->
+                    <div class="pairCountry">
+                        #drzava_1#
+                    </div><!-- end pairCountry -->
+                    <div class="pairResult" id="rez_1">
+                               #ko_1# 
+                    </div><!-- end pairResult -->
+                    <div class="pairPlace" id="place_1">
+                       #WINNER_1#
+                    </div><!-- end pairPlace -->
+                    <div class="marks two">
+                        <ul>
+                            <li id="s11"><span><i class="icon-ok"></i></span><span id="ss11"></span></li>
+                            <li id="s12"><span><i class="icon-ok"></i></span><span id="ss12"></span></li>
+                            <li id="s13"><span><i class="icon-ok"></i></span><span id="ss13"></span></li>
+                            <li id="s14"><span><i class="icon-ok"></i></span><span id="ss14"></span></li>
+                            <li id="s15"><span><i class="icon-ok"></i></span><span id="ss15"></span></li>
+                            <li id="s16"><span><i class="icon-ok"></i></span><span id="ss16"></span></li>
+                            <li id="s17"><span><i class="icon-ok"></i></span><span id="ss17"></span></li>
+                            <li id="s18"><span><i class="icon-ok"></i></span><span id="ss18"></span></li>
+                            <li id="o1"><span class="" ><i class="icon-ok"></i></span>O1</li>
+                        </ul>
+                    </div><!-- end marks -->
+                </div><!-- end pairOne -->
+				
+	   </div>
+	   <!-- end prostor za tablicu prikaza - prvi floor -->
+	</div>
+	<!-- end floor1 -->			
+				
+<!-- ***************************  KOPIRANO IZ DVA FLOORA **********************  -->
+	<div class="floor two oneF">
+	   <div class="tablica_floor oneF">
+                  <!-- prostor za tablicu prikaza - prvi floor -->
+			
+			<div class="pairOne dvaF">				
+                <!-- <div class="pairThree two jugdes"> -->
+                    <p class="pairNo">#stb_2#</p><!-- end pairNo -->
+                    <p class="pairName">#naziv_2#<!-- pairName -->
+                    <div class="pairCountry">
+                           #drzava_2#
+                    </div><!-- end pairCountry -->
+                    <div class="pairResult" id="rez_2">
+                         #ko_2#
+                    </div><!-- end pairResult -->
+                    <div class="pairPlace" id="place_2">
+                        #WINNER_2#
+                    </div><!-- end pairPlace -->
+                        <div class="marks two">
+                        <ul>
+                            <li id="s21"><span><i class="icon-ok"></i></span><span id="ss21"></span></li>
+                            <li id="s22"><span><i class="icon-ok"></i></span><span id="ss22"></span></li>
+                            <li id="s23"><span><i class="icon-ok"></i></span><span id="ss23"></span></li>
+                            <li id="s24"><span><i class="icon-ok"></i></span><span id="ss24"></span></li>
+                            <li id="s25"><span><i class="icon-ok"></i></span><span id="ss25"></span></li>
+                            <li id="s26"><span><i class="icon-ok"></i></span><span id="ss26"></span></li>
+                            <li id="s27"><span><i class="icon-ok"></i></span><span id="ss27"></span></li>
+                            <li id="s28"><span><i class="icon-ok"></i></span><span id="ss28"></span></li>
+                            <li id="o2"><span class="" ><i class="icon-ok"></i></span>O2</li>
+                        </ul>
+                    </div><!-- end marks -->
+                </div><!-- end pairTWO -->
+				
+	   </div>
+	   <!-- end prostor za tablicu prikaza - drugi floor -->
+	</div>
+	<!-- end floor2 -->		
+	
+            </div><!-- end row -->
+
+            <div class="footer">
+                    <img src="./img-cs18/sponsors/fond-du-sport.png" class="footer-logo" />
+                    <img src="./img-cs18/sponsors/fmc.png" class="footer-logo" />
+                    <img src="./img-cs18/sponsors/meyrin.png" class="footer-logo" />
+                    <img src="./img-cs18/sponsors/skynight.png" class="footer-logo" />
+                    <img src="./img-cs18/sponsors/leman-bleu.png" class="footer-logo" />
+                    <img src="./img-cs18/sponsors/classica-motors.png" class="footer-logo" />
+            </div>
+
+        </div><!-- end mainArea -->
+    </body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html> <!-- TODO -->
+    <head>
+        <meta charset="utf-8" />
+        <title>Ranking list - until 8</title> <!-- RGU : Ranking list until 8 couples -->
+        <link rel="stylesheet" href="css/style-cs18.css" />
+          <SCRIPT ID=clientEventHandlersJS LANGUAGE=javascript>
+	<!--
+	function gasi()
+	{  var kolko=parseInt(document.getElementById("koliko").value);
+	   var i;
+	   var karton="#kartoni#";
+                        var x,xx;
+	  for (i=kolko+1;i<=8;i++)
+	           {document.getElementById("red_"+i).style.visibility="hidden";   
+	             document.getElementById("red_"+i).style.borderStyle="hidden";  
+	           }	  
+	  
+	    for (x=0;x<=7;x++)  
+	           {  xx=x+1; 
+	              switch(karton.charAt(x))
+	                 {         
+		   case "1":
+		       document.getElementById("s"+xx).className="startNo yellow";
+		        break;
+		   case "2":
+		       document.getElementById("s"+xx).className="startNo red";
+		        break; 	
+		   default:	      
+		        break;     		
+		  }      
+	               }          
+	           
+	 }
+	 
+	function window_onload() {
+	  gasi();	 
+	}
+//-->
+</SCRIPT>    
+    </head>
+    <body LANGUAGE=javascript onload="return window_onload()">
+      <input type="hidden"  id="koliko" value=#kol#>
+        <div class="header">
+            <div class="left">
+                      #fed_logo#
+            </div><!-- end left -->
+            <div class="center">
+                <p class="eventTitle">#naziv_event#</p><!-- end eventTitle -->
+                <p class="competitionName">#naziv_comp#</p><!-- end competitonName -->
+            </div><!-- end center -->
+            <div class="right">
+                 	#org_logo#
+            </div><!-- end right -->
+        </div><!-- end header -->
+        <div id="mainArea">
+            <table>
+                <tr class="tableInfo">
+                    <td>#pos#</td>
+                    <td>#stn#</td>
+                    <td>#comp#</td>
+                    <td>#kval#</td>
+                </tr>
+                <tr class="tableRows eight" id="red_1">
+                    <td class="position">#poz_1#</td>
+                    <td  id="s1" class="startNo">#stb_1#</td>
+                    <td class="competitorName">#name_1#</td>
+                    <td class="otherInfo">#kval_1#</td>
+                </tr>
+                <tr class="tableRows eight" id="red_2">
+                     <td class="position">#poz_2#</td>
+                    <td  id="s2" class="startNo">#stb_2#</td>
+                    <td class="competitorName">#name_2#</td>
+                    <td class="otherInfo">#kval_2#</td>
+                </tr>
+                <tr class="tableRows eight" id="red_3">
+                    <td class="position">#poz_3#</td>
+                    <td  id="s3" class="startNo">#stb_3#</td>
+                    <td class="competitorName">#name_3#</td>
+                    <td class="otherInfo">#kval_3#</td>
+                </tr>
+                <tr class="tableRows eight" id="red_4">
+                      <td class="position">#poz_4#</td>
+                    <td  id="s4" class="startNo">#stb_4#</td>
+                    <td class="competitorName">#name_4#</td>
+                    <td class="otherInfo">#kval_4#</td>
+                </tr>
+                <tr class="tableRows eight" id="red_5">
+                      <td class="position">#poz_5#</td>
+                    <td  id="s5" class="startNo">#stb_5#</td>
+                    <td class="competitorName">#name_5#</td>
+                    <td class="otherInfo">#kval_5#</td>
+                </tr>
+                <tr class="tableRows eight" id="red_6">
+                      <td class="position">#poz_6#</td>
+                    <td  id="s6" class="startNo">#stb_6#</td>
+                    <td class="competitorName">#name_6#</td>
+                    <td class="otherInfo">#kval_6#</td>
+                </tr>
+                <tr class="tableRows eight" id="red_7">
+                      <td class="position">#poz_7#</td>
+                    <td  id="s7" class="startNo">#stb_7#</td>
+                    <td class="competitorName">#name_7#</td>
+                    <td class="otherInfo">#kval_7#</td>
+                </tr>
+                <tr class="tableRows eight" id="red_8">
+                      <td class="position">#poz_8#</td>
+                    <td  id="s8" class="startNo">#stb_8#</td>
+                    <td class="competitorName">#name_8#</td>
+                    <td class="otherInfo">#kval_8#</td>
+                </tr>                
+            </table>
+            
+            <div class="footer">
+                    <img src="./img-cs18/logo-srrc-white.png" class="footer-logo" />
+                    <img src="./img-cs18/logo-championnat-white-header.png" class="footer-logo" />
+                    <img src="./img-cs18/logo-srrc-white.png" class="footer-logo" />
+                    <img src="./img-cs18/logo-championnat-white-header.png" class="footer-logo" />
+                    <img src="./img-cs18/logo-srrc-white.png" class="footer-logo" />
+                    <img src="./img-cs18/logo-championnat-white-header.png" class="footer-logo" />
+                    <img src="./img-cs18/logo-srrc-white.png" class="footer-logo" />
+                    <img src="./img-cs18/logo-championnat-white-header.png" class="footer-logo" />
+                    <img src="./img-cs18/logo-srrc-white.png" class="footer-logo" />
+            </div>
+
+        </div><!-- end mainArea -->
+    </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html> <!-- TODO -->
+    <head>
+        <meta charset="utf-8" />
+        <title>Winner Ceremony</title> <!-- RGU : The podiums for the winner ceremony -->
+        <link rel="stylesheet" href="css/style-cs18.css" />
+        <SCRIPT ID=clientEventHandlersJS LANGUAGE=javascript>
+<!--
+function gasi()
+{ 
+  if(document.getElementById("poredak").value=="W") 
+  {      if(document.getElementById("koliko").value==2) {document.getElementById("treci").style.visibility="hidden";}
+          if(document.getElementById("koliko").value==1) 
+                {document.getElementById("treci").style.visibility="hidden";
+                  document.getElementById("drugi").style.visibility="hidden";}
+    } 
+  else
+    {  if(document.getElementById("koliko").value==2) {document.getElementById("prvi").style.visibility="hidden";}
+        if(document.getElementById("koliko").value==1) 
+                {document.getElementById("prvi").style.visibility="hidden";
+                  document.getElementById("drugi").style.visibility="hidden";}
+    }      
+    
+   if(document.getElementById("dupli").value=="D") 
+      { document.getElementById("treci").style.visibility="hidden";   
+       document.getElementById("drz_2").style.visibility="hidden";  }
+    else
+      {document.getElementById("name_2d").style.visibility="hidden";}
+ }
+function window_onload() {
+  gasi();
+ 
+}
+//-->
+</SCRIPT>
+    </head>
+    <body LANGUAGE=javascript onload="return window_onload()">
+       <input type="hidden"  id="koliko" value=#kol#>
+       <input type="hidden"  id="dupli" value=#dupli#>
+         <input type="hidden"  id="poredak" value=#poredak#>
+
+         <div class="header">
+            <div class="left">
+                <img src="./img-cs18/logo-championnat-white-header.png" class="event-logo" />
+            </div><!-- end left -->
+            <div class="right">
+                <img src="./img-cs18/logo-srrc-white.png" class="srrc-logo" />
+            </div><!-- end right -->
+            <div class="center">
+                <p class="eventTitle">#naziv_event#</p><!-- end eventTitle -->
+                <p class="competitionName">#naziv_comp#</p><!-- end competitonName -->
+                <p class="competitionName">Podium</p>
+            </div><!-- end center -->
+        </div><!-- end header -->
+        
+        <div id="mainArea">
+            <div class="row">
+            	<div class="pairOne win" id="prvi">
+                     <p class="pairWinerOne">1</p><!-- end pairNo -->
+                    <p class="pairName win1">#naziv_1#</p><!-- pairName -->
+                    <div class="pairCountry">
+                        #drzava_1#
+                    </div><!-- end pairCountry -->
+                </div><!-- end pairOne -->
+                
+                <div class="pairTwo win" id="drugi">
+                    <p class="pairWinerTwo">2</p><!-- end pairNo -->
+                    <p class="pairName win2">#naziv_2#</p><!-- pairName -->                   
+                    <div class="pairCountry" id="drz_2">
+                        #drzava_2#
+                    </div><!-- end pairCountry -->
+                     <p class="pairName win2" id ="name_2d">#naziv_3#</p><!-- pairName -->
+                </div><!-- end pairTwo -->
+                
+   
+                
+                <div class="pairThree win" id="treci">
+                    <p class="pairWinerThree">3</p><!-- end pairNo -->
+                    <p class="pairName win2">#naziv_3#</p><!-- pairName -->
+                    <div class="pairCountry">
+                        #drzava_3#
+                    </div><!-- end pairCountry -->
+                </div><!-- end pairThree -->
+
+            </div><!-- end row -->
+
+            <div class="footer">
+                    <img src="./img-cs18/logo-srrc-white.png" class="footer-logo" />
+                    <img src="./img-cs18/logo-championnat-white-header.png" class="footer-logo" />
+                    <img src="./img-cs18/logo-srrc-white.png" class="footer-logo" />
+                    <img src="./img-cs18/logo-championnat-white-header.png" class="footer-logo" />
+                    <img src="./img-cs18/logo-srrc-white.png" class="footer-logo" />
+                    <img src="./img-cs18/logo-championnat-white-header.png" class="footer-logo" />
+                    <img src="./img-cs18/logo-srrc-white.png" class="footer-logo" />
+                    <img src="./img-cs18/logo-championnat-white-header.png" class="footer-logo" />
+                    <img src="./img-cs18/logo-srrc-white.png" class="footer-logo" />
+            </div>
+
+        </div><!-- end mainArea -->
+    </body>
+</html>

@@ -1,0 +1,361 @@
+@import 'fontello.css';
+
+/*********************************************************************************/
+/* iFrames */
+/*********************************************************************************/
+
+iframe {
+	border: 0;
+}
+
+iframe.glavna
+{
+	 position:absolute; 
+	 left:0; top:0; 
+	 width:100%; 
+	 height:100%;
+	 overflow:hidden;
+}
+iframe.glavna2
+{
+	 position:absolute; 	
+	 width:0; 
+	 height:0;
+	 overflow:hidden;
+	 visibility:hidden;
+	 display:none;
+	 z-index:3;
+}	
+
+/*********************************************************************************/
+/* Body */
+/*********************************************************************************/
+
+body,
+.mainpage_bg,
+.mainpage2_bg {
+    background-color: white;
+    color: black;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+	overflow: hidden; /* should hide the scroll */
+	margin: 0px;
+}
+
+/*********************************************************************************/
+/* Layouts */
+/*********************************************************************************/
+
+.right{
+    float: right;
+    position: relative;
+    right:20px;
+}
+
+.left{
+    float: left;
+    height: 100%;
+    position: relative;
+    left:20px;
+}
+
+/*********************************************************************************/
+/* Headers */
+/*********************************************************************************/
+
+.header {
+    background-color:#e84351;
+    color: #FFF;
+    padding: 0.5% 2%;
+}
+
+.header.mainScreen {
+    background-color: #000;
+}
+
+h1 {
+    font-weight: normal;
+    text-align: center;
+    font-size: 3.125vw; /*2.5rem;*/
+}
+
+.headerTitle {
+    color: rgba(0, 0, 0, 0); /* The text is hidden */
+}
+
+.srrc-logo {
+    height:5.5vw;/*70px;*/
+    margin-top:2.3vw;/*25px;*/
+}
+
+.event-logo {
+    height:9vw;
+    margin-top:0.5vw;
+}
+
+.eventTitle {
+    margin:0;
+    font-size: 2.5vw;/*2rem;*/
+}
+
+.competitionName {
+    margin:0;
+    font-size: 2.5vw;/*2rem;*/
+}
+
+.heat {
+    margin:0;
+    font-size: 2.5vw;/*2rem;*/
+}
+
+/*********************************************************************************/
+/* Footer */
+/*********************************************************************************/
+
+.footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1.25vw;/*1rem;*/
+    background-color: #e84351;
+    color:#FFF;
+    text-align: center;
+    height: 5vw;/*70px;*/
+  }
+
+  .footer-logo {
+      height:3.2vw;/*60px;*/
+      margin:1vw;/*12px;*/
+  }
+
+/*********************************************************************************/
+/* Heat for qualif */
+/*********************************************************************************/
+
+.place, .date {
+    font-size: 1.5em;
+}
+
+.no-margin-padding {
+    padding: 0px;
+    margin: 0px;
+}
+
+#footerMainScreen {
+	visibility: hidden;
+}	
+
+.floor{ /* OSNOVNI DIV ZA PODJELU NA DVA FLOORA */
+    height: 98%;
+    width:49%;
+    text-align:center;
+    padding-top:0vw;
+}
+
+.floor.one { /* IDO PODJELA NA DVA FLOORA - LIJEVI*/
+    float:left;
+}
+
+.floor.two { /* IDO PODJELA NA DVA FLOORA - DESNI*/
+    float:right;
+}
+
+.floor.one.oneF, .floor.two.oneF {
+    background-color:transparent;
+}
+
+.tablica_floor { /* DIV u koji se smješta tablica za lijevi ili desni floor */
+    position:relative;
+    display:table; /* Parent div, pozicija: relative, radi centriranja broja (poz. absolute) */
+    height:90%;
+    width:100%;
+}			
+
+.tablica_floor.oneF { /* DIV u koji se smješta tablica za lijevi ili desni par, kad je samo jedan podij */
+    height:100%;
+}
+
+.pairOne.one {
+    padding-top:0vw;
+    width:40%;
+    margin-left:5%;
+    margin-right:5%;
+}
+
+.pairPlace {
+    font-size: 3.8vw; /* 3.00rem; */
+    height: 1.875vw;/*1.5rem;*/
+    padding: 0.3125vw;/*0.250rem;*/
+    margin-top: 2.5vw;/*2.0rem;*/
+
+    border-color: #fff;
+
+    border-style: solid;
+    border-width: 1px;
+	border-radius:2.5vw;/*2.0rem;*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+	width:60%;
+	margin-left:20%;
+    height: 6.25vw;/*5.0rem;*/
+}
+
+.pairPlace.yellow { /* Yellow card  */
+    color:#404040;
+   background:#FF3;
+}
+
+.pairPlace.red{ /* Red card */
+	color:#FFF;
+	background:#C00;
+}
+
+.pairNo {
+    font-size:3.1vw; /* 2.5rem; */
+    margin:0;
+}
+
+.pairName {
+    font-size:2.5vw; /* 2.0rem; */
+    margin:0;
+    margin:1.25vw 0vw 0.625vw 0;/*1rem 0rem 0.5rem 0rem;*/
+}
+
+.pairName.one {
+    font-size:3.0rem;
+    margin:0vw 0vw 0.625vw 0;/*0rem 0rem 0.5rem 0rem;*/
+}
+
+.pairCountry {
+    font-size:1.9vw; /* 1.5rem; */
+    margin:0;
+    margin:0vw 0vw 0.625vw 0;/*0rem 0rem 0.5rem 0rem;*/
+}
+
+.pairCountry.one {
+    font-size: 2.5vw;/*2rem;*/
+}
+
+.pairResult {
+    color: #e84351;
+    font-size: 3.1vw; /* 2.5rem; */
+    margin:0;
+}
+
+.pairResult.one {
+    font-size: 3.75vw;/*3rem;*/
+}
+
+.marks > ul li, .marks.two > ul li {
+    display: inline-block;
+    font-size: 2.5vw; /* 2.0rem; */
+}
+
+.marks > ul li:last-child{
+    margin-left: 2.25vw;/*2rem;*/
+}
+.marks > ul li span.noVote i{
+    visibility: hidden;
+}
+.marks > ul li i{
+    display: block;
+    padding-bottom: 0.625vw;/*0.500rem;*/
+}
+
+.icon-ok {
+    color: #000;
+}
+
+/*********************************************************************************/
+/* njs */
+/*********************************************************************************/
+
+table {
+	vertical-align: baseline;
+    
+	border-collapse: collapse;
+	border-spacing: 0;
+    border: 2px solid #e84351;
+    
+	margin: 2.5vw auto;/*2rem auto;*/
+    width: 90%;
+
+	font-size: 2.3vw; /*1.5em;*/
+}
+
+tr.tableInfo {
+    font-weight: 550;
+    text-align: center;
+    
+    color:#FFF;
+    background-color:#e84351;
+    height: 4.375vw;/*3.5rem;*/
+}
+
+tr.tableInfo td{
+    vertical-align: middle;
+}
+
+tr.tableRows {
+    height: 5.125vw;/*4.1rem;*/
+    border-bottom: 1px solid gray;
+}
+
+tr.tableRows8 {
+    height: 4.5vw;/*3.6rem;*/
+    border-bottom: 1px solid gray;
+}
+
+tr.tableRows td {
+    border: 0px;
+}
+
+/*********************************************************************************/
+/* proglasenje (podiums) */
+/*********************************************************************************/
+
+.pairOne{   /* OSNOVNO - 5 PAROVA NA EKRANU */
+    display: inline-block;
+    float: left;
+    width:100%;
+    margin: 4vw 0vw 0vw 0vw;/* 2rem 0rem 0rem 0rem;*/
+}
+
+.win {
+    margin: 0;
+}
+
+.pairTwo{
+    display: inline-block;
+    float: left;
+    margin-left: 15vw;
+    margin-top:-10vw;
+}
+
+.pairThree{
+    display: inline-block;
+    float: right;
+    margin-right: 15vw;
+    margin-top:-10vw;
+}
+
+.pairWinerOne,
+.pairWinerTwo,
+.pairWinerThree {
+    font-size: 6vw;
+    margin-bottom: 0px;
+}
+
+/*********************************************************************************/
+/* tmp */
+/*********************************************************************************/
+
+.border {
+    border-color: #f00;
+    border-width: 2.0;
+    border-style: solid;
+}

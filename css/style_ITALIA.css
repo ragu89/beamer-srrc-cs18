@@ -1,0 +1,436 @@
+﻿/* Import Fontello css*/
+@import 'fontello.css';
+/* Import css za oblikovanje prikaza */
+@import 'layout.css';
+
+BODY{
+/* BOJA I SLIKA PODLOGE NA MAIN SCREEN AREA */	
+	background-color: #f3f4f8; /* plavkasto sivo - koristiti na slabim projektorima */
+	
+	/* dark Bg */
+	/*    background-image: url(../img/bg.jpg);
+    /* end dark Bg */
+	
+	/* LIGHT BLUE */
+    /*   background-image: url(../img/bg_blue_2.jpg);
+    /* end LIGHT BLUE */
+
+	
+    /* GREY - sivkasti tonovi */
+	/*  background-image: url(../img/light_bg2.jpg); 
+    /* end GREY */
+	
+	/*		 background-image: url(../img/blue-white-abstract-backgrounds-wallpapers.jpg);
+    /* GREY - sivkasti tonovi */
+	
+	 	 background-image: url(../img/soft_green_wave_background.jpg); 
+    /* end GREY */
+	
+	/*	 background-image: url(../img/blue-white-abstract-backgrounds-wallpapers.jpg);
+	
+	/* GREEN */
+    /*     background-image: url(../img/bg-green.jpg); /*  jpg za zelenu radnu površinu */
+	/* end GREEN */
+	
+	/* PINK */
+    /*   background-image: url(../img/bg_light_pink.jpg); /*  jpg za crvenu radnu površinu */
+	/* end PINK */
+	
+	/* RED */
+    /*     background-image: url(../img/bg_light_red.jpg); /*  crvenkasti jpg za crvenu radnu površinu */
+	/* end RED */
+	
+	/* RED DARK */
+    /*     background-image: url(../img/bg_red_dark.jpg); /*  crvenkasti jpg za crvenu radnu površinu */
+	/* end RED */
+	
+	/* grey 2 */
+    /*    background-image: url(../img/bg_light_grey2.jpg); /*  sivi jpg za IDO BLUE radnu površinu */
+	/* grey  2 */
+	
+	/* BLACK */
+	/*     background-image: url(../img/abstract_black_bg.jpg); /*  crni jpg za crno-sivu radnu površinu PZS MTP DRZAVNO -  */
+	
+/* POSTAVKE PONAŠANJA POZADINE - COVER 	*/
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; 
+    overflow: hidden;
+}
+
+
+/* --------------------------------------------------------------------- */
+/* MAIN_BACKGROUND I SECOND_BACKGROUND POZADINSKA SLIKA, HEADER I FOOTER */
+.mainpage_bg{
+	/* POZADINSKA SLIKA NA GLAVNOJ STRANICI */
+	background-image:url(../glavna.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%; /* PREKRIVA CIJELI EKRAN, MOGUĆE IZOBLIČENJE SLIKE OVISNO O OMJERIMA STRANICA */
+    overflow: hidden;
+}
+.mainpage2_bg{
+	/* POZADINSKA SLIKA NA NASLOVNOJ STRANICI RUNDE */
+	background-image:url(../glavna_a.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+.header.mainScreen{
+    background-color: transparent;
+	background-image:none; /* SKRIVA HEADER (Main pag, AKO JE POSTAVLJEN SA GRADIENTOM */
+} 
+.footerMainScreen{
+    background-color: transparent;
+	background-image:none; 	/* SKRIVA FOOTER, AKO JE POSTAVLJEN SA GRADIENTOM */}
+	
+/* KRAJ MAIN_BACKGROUND I SECOND_BACKGROUND POZADINSKA SLIKA, HEADER I FOOTER */
+/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+/* header - NA STRANICAMA ZA PRIKAZ RUNDI I REZULTATA*/
+
+.header, .header.floor, tr.tableInfo { /* boje headera i headera tablice za rezultate */
+	/* zelena boja headera */
+    /* background-color: rgba(54, 69, 59, 0.9); */
+	/*  */
+
+	/* SIVI GRADIENT   */
+	/*	background-color: rgba(96, 96, 96, 0.8); 
+	 background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(160,160,160,0.6)), to(rgba(96,96,96,1.0)));
+	 background-image: -webkit-linear-gradient(top, rgba(160,160,160,0.6), rgba(96,96,96,1.00));
+	 background-image: -moz-linear-gradient(top, rgba(160,160,160,0.6), rgba(96,96,96,1.00)); 
+	 background-image: -ms-linear-gradient(top, rgba(160,160,160,0.6), rgba(96,96,96,1.00));
+	 background-image: -o-linear-gradient(top, rgba(160,160,160,0.6), rgba(96,96,96,1.00));
+	 background-image: linear-gradient(to bottom, rgba(160,160,160,0.6), rgba(96,96,96,1.00));
+	 filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#A0A0A0, endColorstr=#606060); 
+	 /* KRAJ SIVOG GRADIENTA */
+    
+	/* PLAVI GRADIENT - OSNOVNI  */
+	/*	background-color: rgba(0, 0, 128, 0.8); 
+	 background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(48,147,199,0.6)), to(rgba(0,0,128,1.0)));
+	 background-image: -webkit-linear-gradient(top, rgba(48,147,199,0.6), rgba(0,0,128,1.00));
+	 background-image: -moz-linear-gradient(top, rgba(48,147,199,0.6), rgba(0,0,128,1.00)); 
+	 background-image: -ms-linear-gradient(top, rgba(48,147,199,0.6), rgba(0,0,128,1.00));
+	 background-image: -o-linear-gradient(top, rgba(48,147,199,0.6), rgba(0,0,128,1.00));
+	 background-image: linear-gradient(to bottom, rgba(48,147,199,0.6), rgba(0,0,128,1.00));
+	 filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=rgba(48,147,199,0.6), endColorstr=rgba(0,0,128,1.00)); 
+	 /* KRAJ PLAVOG GRADIENTA */	
+	 
+	/* ZELENI GRADIENT   */
+		background-color: rgba(0,100,51,0.8); 
+	 background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,204,102,0.6)), to(rgba(0,100,51,1.0)));
+	 background-image: -webkit-linear-gradient(top, rgba(0,204,102,0.6), rgba(0,100,51,1.00));
+	 background-image: -moz-linear-gradient(top, rgba(0,204,102,0.6), rgba(0,100,51,1.00)); 
+	 background-image: -ms-linear-gradient(top, rgba(0,204,102,0.6), rgba(0,100,51,1.00));
+	 background-image: -o-linear-gradient(top, rgba(0,204,102,0.6), rgba(0,100,51,1.00));
+	 background-image: linear-gradient(to bottom, rgba(0,204,102,0.6), rgba(0,100,51,1.00));
+	 filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#A0A0A0, endColorstr=#606060); 
+	 /* KRAJ ZELENOG GRADIENTA */	
+	 
+	 /* CRVENI GRADIENT   */
+	 /*	background-color: rgba(153,0,0,0.8); 
+	 background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,0,0,0.6)), to(rgba(153,0,0,1.0)));
+	 background-image: -webkit-linear-gradient(top, rgba(255,0,0,0.6), rgba(153,0,0,1.00));
+	 background-image: -moz-linear-gradient(top, rgba(255,0,0,0.6), rgba(153,0,0,1.00)); 
+	 background-image: -ms-linear-gradient(top, rgba(255,0,0,0.6), rgba(153,0,0,1.00));
+	 background-image: -o-linear-gradient(top, rgba(255,0,0,0.6), rgba(153,0,0,1.00));
+	 background-image: linear-gradient(to bottom, rgba(255,0,0,0.6), rgba(153,0,0,1.00));
+	 filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FF0000, endColorstr=#990000); 
+	 /* KRAJ CRVENOG GRADIENTA */	
+
+}
+
+/* DIJELOVI HEADERA ZA SMJEŠTAJ ELEMENATA */
+.center p{
+    color: #fff; /* osnovna bijela boja teksta u headeru */
+}
+.center .eventTitle{
+	text-shadow: 2px 2px 2px rgba(0,0,0,0.8); /* CRNA POLUPROZIRNI SJENA TEKSTA */
+}
+.center .competitionName{
+	text-shadow: 2px 2px 2px rgba(0,0,0,0.8); /* CRNA POLUPROZIRNI SJENA TEKSTA */
+}
+.center .heat{
+	text-shadow: 2px 2px 2px rgba(0,0,0,0.8); /* CRNA POLUPROZIRNI SJENA TEKSTA */
+}
+	  .header.TwoFloor{ /* IDO HEADER ZA DVA FLOORA */
+		  color: #fff; /* bijeli tekst */
+		  text-shadow: 2px 2px 2px rgba(0,0,0,0.8); /* CRNA POLUPROZIRNI SJENA TEKSTA */
+	  }
+
+/* END HEADER */
+
+
+
+/* ------------------- MAIN AREA - CENTRALNI DIO EKRANA IZMEĐU HEADERA I FOOTERA  ---------------------------- */
+/* mainArea */
+#mainArea{
+/* BOJA FONTA NA MAIN SCREEN AREA, OVISNO O PODLOZI */
+/* SVJETLI FONTOVI */
+	/*  color: rgba(255,255,255,1.00);
+	 		text-shadow: 2px 2px 2px rgba(0,0,0,0.7);/* boja teksta bijela, shadow tamno sivi  */
+			
+/* TAMNI FONTOVI */
+	 /*color: rgba(0,0,128,1.00);
+		 	text-shadow: 2px 2px 2px rgba(255,255,255,0.7) /* navy blue, bijela poluprozirna sjena */
+	 /* color: #696969;
+	 		text-shadow: 2px 2px 2px rgba(255,255,255,0.7); /* srednje duboka siva, bijela poluprozirna sjena */
+	 /*color: #202020;
+	 		text-shadow: 2px 2px 4px rgba(255,255,255,0.7);	 /* tamno siva, skoro crna, bijela poluprozirna sjena */
+	  color: #006400;
+	 		text-shadow: 2px 2px 2px rgba(255,255,255,0.7); /* boja texta tamno zelena, ista kao zeleni header, bijela poluprozirna sjena */
+	 /* color: #DC143C;
+	 		text-shadow: 1px 1px 1px rgba(255,255,255,0.7); /* boja texta crvena */
+}
+
+
+/* ========================== GLAVNI EKRAN I EKRAN ZA NAZIV RUNDE ================================*/
+
+.competitionTitle{ /* glavni naslov na glavnom ekranu */
+    /* if light theme selected, replace color: #fff with #111 
+    and comment out text-shadow property
+    and vice versa */
+color: #fff; /* bijela boja teksta na glavnom ekranu */
+text-shadow: -3px 3px 2px rgba(0, 0, 0, 0.9);
+}
+
+.headerTitle{
+     /* if light theme selected, replace color: #fff with #111 
+    and comment out text-shadow property
+    and vice versa */
+	color: #fff; /* */
+	text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.9); /* BIJELI TEKST, CRNI SHADOW LAGANO PROZIRNI */
+}
+.place{ /* mjesto održavanja turnira na glavnom ekranu */
+    /* if light theme selected, replace color: #fff with #111 
+    and comment out text-shadow property
+    and vice versa */
+	color: #fff;
+	text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.9);
+}
+.date{
+    /* if light theme selected, replace color: #fff with #111 
+    and comment out text-shadow property
+    and vice versa */
+	color: #fff;
+	text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.9);
+}
+
+
+
+/* ============================== TABLICA ZA STARTNE LISTE I REZULTATE =========================== */
+
+tr.tableInfo { /* header tablice za startne liste i rezultate, i info tekst */
+	/* postavke boje riješene u Mainscreen area */
+    border-bottom: 2px solid rgba(119, 139, 113, 0.8);
+}
+tr.tableInfo td{
+    color: #fff; /* bijela */
+    text-shadow: 1px 1px 2px rgba(36, 32, 40, 0.8);
+}
+tr.tableRows{ /* redovi info tablice ispod tableInfor headera */
+
+    /* background-color: rgba(140, 160, 170, 0.8); /* plavkasto siva */
+	/* background-color: rgba(119, 139, 113, 0.8); /* zelenkasto siva */
+	/* background-color: rgba(0,100,51, 1.0); /* zelena, neprozirna */
+	background-color: rgba(32, 32, 32, 0.8); /* crno siva, default */
+	 
+	
+		/* PLAVI GRADIENT   */
+	/*	background-color: rgba(0, 0, 128, 0.6); 
+	 background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(48,147,199,0.6)), to(rgba(0,0,128,0.6)));
+	 background-image: -webkit-linear-gradient(top, rgba(48,147,199,0.6), rgba(0,0,128,0.6));
+	 background-image: -moz-linear-gradient(top, rgba(48,147,199,0.6), rgba(0,0,128,0.6)); 
+	 background-image: -ms-linear-gradient(top, rgba(48,147,199,0.6), rgba(0,0,128,0.6));
+	 background-image: -o-linear-gradient(top, rgba(48,147,199,0.6), rgba(0,0,128,0.6));
+	 background-image: linear-gradient(to bottom, rgba(48,147,199,0.6), rgba(0,0,128,0.6));
+	 filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=rgba(48,147,199,0.6), endColorstr=rgba(0,0,128,0.6)); 
+	 /* KRAJ PLAVOG GRADIENTA */	
+
+	/* ZELENI GRADIENT  */
+	 /*background-image: -webkit-gradient(linear, left top, left bottom, from(#00cc66), to(#006433));
+	 background-image: -webkit-linear-gradient(top, #00cc66, #006433);
+	 background-image: -moz-linear-gradient(top, #00cc66, #006433);
+	 background-image: -ms-linear-gradient(top, #00cc66, #006433);
+	 background-image: -o-linear-gradient(top, #00cc66, #006433);
+	 background-image: linear-gradient(to bottom, #00cc66, #006433);
+	 filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#00cc66, endColorstr=#006433); 
+	 /* KRAJ ZELENOG GRADIENTA */
+	
+	  
+	 /* SIVI GRADIENT - KORISTITI U SVIM CSS-OVIMA  */
+	 /*	 background-color: rgba(192, 192, 192, 0.8); 
+	  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(160,160,160,0.6)), to(rgba(160,160,160,0.6)));
+	 backgrfound-image: -webkit-linear-gradient(top, rgba(160,160,160,0.6), rgba(96,96,96,1.00));
+	 background-image: -moz-linear-gradient(top, rgba(160,160,160,0.6), rgba(96,96,96,1.00)); 
+	 background-image: -ms-linear-gradient(top, rgba(160,160,160,0.6), rgba(96,96,96,1.00));
+	 background-image: -o-linear-gradient(top, rgba(160,160,160,0.6), rgba(96,96,96,1.00));
+	 background-image: linear-gradient(to bottom, rgba(160,160,160,0.6), rgba(96,96,96,1.00));
+	 filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#A0A0A0, endColorstr=#606060); 
+	 /* KRAJ SIVOG GRADIENTA */
+	 
+    border-bottom: 1px solid rgba(119, 139, 113, 0.8);
+}
+tr.tableRows.six{ /* proglašenje parova, prikaz 6 i manje parova */
+    height: 15.83%;
+}
+tr.tableRows.seven{ /* proglašenje parova, prikaz 7 parova */
+    height: 13.57%;
+}
+tr.tableRows.eight{ /* proglašenje parova, prikaz 8 paroa */
+    height: 11.87%;
+}
+.startNo, .otherInfo, .position, .competitorName { /* informacije unutar infor tablice */
+    color: #FFF; /* bijela boja teksta */
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.8);}
+	
+
+	/* PRIPREMA ZA PRIKAZ KARTONA U TABLICI REZULTATA RUNDE I NJS REZULTATA */
+.startNo.yellow{
+	color:#FFFF00; }
+.startNo.red {
+	color:#FF0000; }
+.startNo.black {
+	color:#000000; }
+/* KRAJ PRIPREME */
+	
+.tekst{ /* tekst unutar slobodnog unosa za infor na ekranu */
+    color: #fff;
+	text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.8);
+}
+
+
+.row.winners > div[class^=pair]{
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(36, 32, 40, 0.8);
+}
+.pairPlace{ /* okvir oko podloge za mjesto i prikaz kartona */
+	border-color:rgba(0,0,0,0.5); /* crna, poluprozirna */
+}
+.pairPlace.green{ /* ZELENI KARTON OBSERVERA,  */
+ 	 color:#FFF;
+		/* text-shadow: 2px 2px 2px rgba(102,102,102,0.9); /* */
+		text-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+		   background:#0F0;
+    background: -webkit-gradient(linear, left top, left bottom, from(#59FF26), to(#009900));
+ 		background-image: -webkit-linear-gradient(left, #009900, #00CC00, 00CC00, #009900);
+ 		background-image: -moz-linear-gradient(left, #009900, #00CC00, #00CC00, #009900);
+ 		background-image: -ms-linear-gradient(left, #009900, #00CC00, #00CC00, #009900);
+ 		background-image: -o-linear-gradient(left, #009900, #00CC00, #009900); /* zeleni gradient */
+} 
+
+.pairPlace.yellow{ /* ŽUTI KARTON OBSERVERA  */
+    color:#404040;
+		/* text-shadow: 2px 2px 2px rgba(102,102,102,0.5); /* */
+		text-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+   background:#FF3;
+   background: -webkit-gradient(linear, left top, left bottom, from(#FFFF33), to(#B3B324));
+ 		background-image: -webkit-linear-gradient(left, #FFFF33, #FFFF99, #FFFF33);
+ 		background-image: -moz-linear-gradient(left,#FFFF33,#FFFF99, #FFFF33);
+ 		background-image: -ms-linear-gradient(left,#FFFF33, #FFFF99, #FFFF33);
+ 		background-image: -o-linear-gradient(left, #FFFF33, #FFFF99, #FFFF33);
+ 		background-image: linear-gradient(to left,#FFFF33, #FFFF99, #FFFF33);
+}
+.pairPlace.red{ /* CRVENI KARTON OBSERVERA  */
+	color:#FFF;
+		/* text-shadow: 2px 2px 2px rgba(102,102,102,0.5); /* */
+		text-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+	background:#C00;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f62b2b), to(#A10202));
+ 		 background-image: -webkit-linear-gradient(left, #A10202, #F62B2B, #F62B2B,  #A10202);
+ 		 background-image: -moz-linear-gradient(left, #A10202, #F62B2B, #F62B2B,  #A10202);
+ 		 background-image: -ms-linear-gradient(left, #A10202, #F62B2B, #F62B2B,  #A102022);
+		 background-image: -o-linear-gradient(left, #A10202,#F62B2B, #F62B2B,  #A10202);
+ 		 background-image: linear-gradient(to left, #A10202, #F62B2B, #F62B2B,  #A10202);
+}
+.pairPlace.black{ /* CRNI KARTON OBSERVERA  */
+	color:#FFF;
+		text-shadow: 2px 2px 2px rgba(102,102,102,0.5);
+   background:#C00;
+   background: -webkit-gradient(linear, left top, left bottom, from(#7d7e7d), to(#0e0e0e));
+		background-image: -webkit-linear-gradient(left, #0e0e0e, #7d7e7d, # #7d7e7d,  #0e0e0e);
+ 		background-image: -moz-linear-gradient(left, #0e0e0e, #7d7e7d, #7d7e7d,  #0e0e0e);
+ 		background-image: -ms-linear-gradient(left, #0e0e0e, #7d7e7d, #7d7e7d,  #0e0e0e);
+ 		background-image: -o-linear-gradient(left, #0e0e0e, #7d7e7d,#7d7e7d,  #0e0e0e);
+		ackground-image: linear-gradient(to left, #0e0e0e, #7d7e7d, #7d7e7d,  #0e0e0e);
+}
+
+/* ------------------------------- WINNER CEREMONY ------------------ */
+           /* BOJA PODLOGE ZA NATPIS MJESTA I OKVIR U LAYOUT.CSS-U */
+/* ------------------------------- WINNER CEREMONY ------------------ */
+
+
+/* ====================================  KRAJ MAIN AREA ======================================== */
+
+
+
+/* --------------------------  footer ------------------------------------------------ */
+ #footer{
+     background-color: rgba(119, 139, 113, 0.7); /* zelenkasta pozadina, poluprozirna */
+	/* background-color: rgba(243, 244, 248, 0.6); /* plavkasta pozadina, poluprozirna */
+    /* background-color: #f3f4f8; /* plavkasto sivo - koristiti na slabim projektorima */
+	
+	/* SIVI GRADIENT */
+	/*  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(160,160,160,0.6)), to(rgba(160,160,160,0.6)));
+	 background-image: -webkit-linear-gradient(top, rgba(160,160,160,0.6), rgba(96,96,96,1.00));
+	 background-image: -moz-linear-gradient(top, rgba(160,160,160,0.6), rgba(96,96,96,1.00)); 
+	 background-image: -ms-linear-gradient(top, rgba(160,160,160,0.6), rgba(96,96,96,1.00));
+	 background-image: -o-linear-gradient(top, rgba(160,160,160,0.6), rgba(96,96,96,1.00));
+	 background-image: linear-gradient(to bottom, rgba(160,160,160,0.6), rgba(96,96,96,1.00));
+	 filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#A0A0A0, endColorstr=#606060); 
+	 /* KRAJ SIVOG GRADIENTA */
+	 
+	 /* CRVENI GRADIENT   */
+		background-color: rgba(153,0,0,0.8); 
+	 background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,0,0,0.6)), to(rgba(153,0,0,1.0)));
+	 background-image: -webkit-linear-gradient(top, rgba(255,0,0,0.6), rgba(153,0,0,1.00));
+	 background-image: -moz-linear-gradient(top, rgba(255,0,0,0.6), rgba(153,0,0,1.00)); 
+	 background-image: -ms-linear-gradient(top, rgba(255,0,0,0.6), rgba(153,0,0,1.00));
+	 background-image: -o-linear-gradient(top, rgba(255,0,0,0.6), rgba(153,0,0,1.00));
+	 background-image: linear-gradient(to bottom, rgba(255,0,0,0.6), rgba(153,0,0,1.00));
+	 filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FF0000, endColorstr=#990000); 
+	 /* KRAJ CRVENOG GRADIENTA */
+
+	/* ZELENI GRADIENT   */
+	/*	background-color: rgba(0,100,51,0.8); 
+	 background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,204,102,0.6)), to(rgba(0,100,51,1.0)));
+	 background-image: -webkit-linear-gradient(top, rgba(0,204,102,0.6), rgba(0,100,51,1.00));
+	 background-image: -moz-linear-gradient(top, rgba(0,204,102,0.6), rgba(0,100,51,1.00)); 
+	 background-image: -ms-linear-gradient(top, rgba(0,204,102,0.6), rgba(0,100,51,1.00));
+	 background-image: -o-linear-gradient(top, rgba(0,204,102,0.6), rgba(0,100,51,1.00));
+	 background-image: linear-gradient(to bottom, rgba(0,204,102,0.6), rgba(0,100,51,1.00));
+	 filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#A0A0A0, endColorstr=#606060); 
+	 /* KRAJ ZELENOG GRADIENTA */	
+	 
+}
+#footerMainScreen .disclamer{ /* LPRDS copyright natpis na glavnom ekranu i ekranu runde*/
+		color: rgba(255,255,255,1.00);
+	 	text-shadow: 2px 2px 2px rgba(0,0,0,0.7);/* boja teksta bijela, shadow tamno sivi  */
+}
+
+
+.disclamer{ /* LPRDS copyright natpis */
+	/* BOJA FONTA  OVISNO O PODLOZI */
+	
+    /*color: #fff; */
+	
+/* SVJETLI FONTOVI */
+	  color: rgba(255,255,255,1.00);
+	 		text-shadow: 2px 2px 2px rgba(0,0,0,0.7);/* boja teksta bijela, shadow tamno sivi  */
+			
+/* TAMNI FONTOVI */
+	 /*color: rgba(0,0,128,1.00);
+		 	 /* text-shadow: 2px 2px 2px rgba(255,255,255,0.7); /* navy blue */
+	 /* color: #696969;
+	 		text-shadow: 2px 2px 2px rgba(255,255,255,0.7); /* srednje duboka siva */
+	 /* color: #202020;
+	 		text-shadow: 2px 2px 4px rgba(255,255,255,0.7);	 /* tamno siva, skoro crna */
+	 /* color: #006400;
+	 		text-shadow: 2px 2px 2px rgba(255,255,255,0.7); /* boja texta tamno zelena, ista kao zeleni header */
+}
+
+
+
