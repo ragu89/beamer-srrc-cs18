@@ -115,6 +115,21 @@ h1 {
     margin:4vw 0 0 0;
 }
 
+.triangles-top-right {
+    position: absolute;
+    right: 0;
+    width:6vw;
+    margin: -4vw 0vw 0vw 0vw;
+}
+
+.triangles-bottom-left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width:6vw;
+    margin: 7vw 0vw;
+}
+
 /*********************************************************************************/
 /* Footer */
 /*********************************************************************************/
