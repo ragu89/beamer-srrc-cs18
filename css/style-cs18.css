@@ -179,6 +179,11 @@ h1 {
     margin: 0px;
 }
 
+.no-margin-padding-bottom {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
 #footerMainScreen {
 	visibility: hidden;
 }	
@@ -316,10 +321,10 @@ table {
 	border-spacing: 0;
     border: 2px solid #e84351;
     
-	margin: 2.5vw auto;/*2rem auto;*/
+	margin: 2.0vw auto;/*2rem auto;*/
     width: 90%;
 
-	font-size: 2.3vw; /*1.5em;*/
+	font-size: 2.0vw; /*1.5em;*/
 }
 
 tr.tableInfo {
@@ -328,7 +333,7 @@ tr.tableInfo {
     
     color:#FFF;
     background-color:#e84351;
-    height: 4.375vw;/*3.5rem;*/
+    height: 4.2vw;/*3.5rem;*/
 }
 
 tr.tableInfo td{
@@ -336,12 +341,12 @@ tr.tableInfo td{
 }
 
 tr.tableRows {
-    height: 5.125vw;/*4.1rem;*/
+    height: 4.2vw;/*4.1rem;*/
     border-bottom: 1px solid gray;
 }
 
 tr.tableRows8 {
-    height: 4.5vw;/*3.6rem;*/
+    height: 4.2vw;/*3.6rem;*/
     border-bottom: 1px solid gray;
 }
 
