@@ -44,6 +44,11 @@ body,
 	margin: 0px;
 }
 
+#mainArea {
+    width:88%;
+    margin: 0 auto;
+}
+
 /*********************************************************************************/
 /* Layouts */
 /*********************************************************************************/
@@ -110,23 +115,28 @@ h1 {
     font-size: 2.2vw;/*2rem;*/
 }
 
-.image-background-home {
-    width:60%;
+.image-background-glavni {
+    width:80%;
+    margin:4vw 0 0 0;
+}
+
+.image-background-bez {
+    width:70%;
     margin:4vw 0 0 0;
 }
 
 .triangles-top-right {
     position: absolute;
     right: 0;
-    width:6vw;
-    margin: -4vw 0vw 0vw 0vw;
+    width:5%;
+    margin: 0;
 }
 
 .triangles-bottom-left {
     position: absolute;
     left: 0;
     bottom: 0;
-    width:6vw;
+    width:5%;
     margin: 7vw 0vw;
 }
 
@@ -220,7 +230,7 @@ h1 {
 
 .pairOne.one {
     padding-top:0vw;
-    width:41%;
+    width:45%;
     margin-left:5%;
     margin-right:4%;
 }
@@ -322,7 +332,7 @@ table {
     border: 2px solid #e84351;
     
 	margin: 2.0vw auto;/*2rem auto;*/
-    width: 90%;
+    width: 100%;
 
 	font-size: 2.0vw; /*1.5em;*/
 }
