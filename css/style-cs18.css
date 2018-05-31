@@ -41,7 +41,11 @@ body,
     text-align: center;
     font-size: 20px;
 	overflow: hidden; /* should hide the scroll */
-	margin: 0px;
+    margin: 0px;
+}
+
+.podiums {
+    background-image: url("../img-cs18/background-swiss-flag.jpg");
 }
 
 #mainArea {
