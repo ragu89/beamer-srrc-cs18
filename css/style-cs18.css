@@ -44,10 +44,6 @@ body,
     margin: 0px;
 }
 
-.podiums {
-    background-image: url("../img-cs18/background-swiss-flag.jpg");
-}
-
 #mainArea {
     width:88%;
     margin: 0 auto;
@@ -142,6 +138,25 @@ h1 {
     bottom: 0;
     width:5%;
     margin: 7vw 0vw;
+}
+
+.swiss-flag {
+    /* position: absolute;
+    margin: 0 auto; */
+
+    /* display: ab;
+    margin-left: auto;
+    margin-right: auto; */
+
+    background-image:url('../img-cs18/background-swiss-flag-square.jpg');
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
+    background-attachment: fixed;
+    background-color: #f6b4b8;
+
+    height: 100%;
+    width: 100%;
 }
 
 /*********************************************************************************/
@@ -390,21 +405,27 @@ tr.tableRows td {
 .pairTwo{
     display: inline-block;
     float: left;
-    margin-left: 15vw;
+    margin-left: 10vw;
     margin-top:-10vw;
 }
 
 .pairThree{
     display: inline-block;
     float: right;
-    margin-right: 15vw;
+    margin-right: 10vw;
     margin-top:-10vw;
 }
 
-.pairWinerOne,
+.pairWinerOne {
+    margin-top: 7vw;
+    margin-bottom: 0px;
+    font-size: 6vw;
+}
+
 .pairWinerTwo,
 .pairWinerThree {
     font-size: 6vw;
+    margin-top: 5vw;
     margin-bottom: 0px;
 }
 
